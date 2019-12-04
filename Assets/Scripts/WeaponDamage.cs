@@ -8,8 +8,8 @@ public class WeaponDamage : MonoBehaviour
     public int damage;
 
     public GameObject bloodAnim;
+    public GameObject damageCanvas;
     private GameObject hitPoit;
-    private GameObject currentBlood;
 
     private void Start()
     {
@@ -21,19 +21,23 @@ public class WeaponDamage : MonoBehaviour
  
         if (collision.gameObject.tag.Equals("Enemy"))
         {
-            if (bloodAnim != null)
+            if (bloodAnim != null && hitPoit != null)
             {
-                currentBlood = Instantiate(bloodAnim, hitPoit.transform.position, hitPoit.transform.rotation);
-
-                Invoke("DestroyBlood", 0.5f);
+                Destroy( Instantiate(bloodAnim, 
+                        hitPoit.transform.position, 
+                        hitPoit.transform.rotation)
+                    , 0.5f );
             }
+
+            var clone = (GameObject) Instantiate(
+                damageCanvas, 
+                hitPoit.transform.position, 
+                Quaternion.Euler(Vector3.zero)
+            );
+            clone.GetComponent<DamageNumber>().damagePoints = damage;
 
             collision.gameObject.GetComponent<HealthManager>().DamageCharacter(damage);
         }
     }
 
-    private void DestroyBlood()
-    {
-        Destroy(currentBlood);
-    }
 }
