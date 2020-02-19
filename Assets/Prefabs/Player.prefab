@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 1928780396530147141}
   - component: {fileID: 5496766702058277807}
   - component: {fileID: 3453797094401647150}
+  - component: {fileID: 5392820953355020575}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -199,6 +200,7 @@ MonoBehaviour:
   nextUUID: 
   speed: 5
   lastMovement: {x: 0, y: 0}
+  canMove: 1
   attackTime: 0.5
 --- !u!114 &5496766702058277807
 MonoBehaviour:
@@ -226,6 +228,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 0
+  flashActive: 1
+  flashLength: 1
+  expWhenDefeated: 0
+--- !u!114 &5392820953355020575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928780396530147136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b43c9ff591a1f748a63777ed1b679c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
+  exp: 0
+  expToLevelUp: 000000000a00000019000000320000005a0000009600000022010000f401000084030000dc050000c4090000
+  hpLevels: 6400000096000000d20000000e0100004f0100009a010000f401000058020000b2020000070300005c030000
+  strengthLevels: 00000000010000000200000005000000080000000c0000000d00000012000000140000001600000019000000
+  defenseLevels: 000000000100000002000000030000000500000007000000090000000c0000000f0000001400000019000000
+  speedLevels: 000000000100000002000000060000000700000008000000090000000c0000000d0000000e00000014000000
+  luckLevels: 00000000010000000200000004000000070000000a0000000f000000120000001e0000001600000019000000
+  accuracyLevels: 3200000032000000340000003500000035000000370000003a0000003c000000340000004000000041000000
 --- !u!1 &2831050311397148021
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +276,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2831050311397148021}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.375, y: -0.313, z: 0}
+  m_LocalPosition: {x: -0.375, y: -0.313, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4439830375510247752}

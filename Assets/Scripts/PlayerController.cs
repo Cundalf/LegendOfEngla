@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     //public float currentSpeed = 5.0f;
     public Vector2 lastMovement = Vector2.zero;
     public static bool playerCreated;
+    public bool canMove = true;
 
     private bool walking = false;
     private bool attacking = false;
@@ -37,10 +38,11 @@ public class PlayerController : MonoBehaviour
     {
         walking = false;
 
+        if (!canMove) return;
+
         if(attacking)
         {
             attackTimeCounter -= Time.deltaTime;
-            Debug.Log(attackTimeCounter);
             if(attackTimeCounter < 0)
             {
                 attacking = false;
