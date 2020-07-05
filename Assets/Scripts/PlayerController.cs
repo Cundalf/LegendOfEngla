@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public Vector2 lastMovement = Vector2.zero;
     public static bool playerCreated;
     public bool canMove = true;
+    public bool isTalking;
 
     private bool walking = false;
     private bool attacking = false;
@@ -32,10 +33,17 @@ public class PlayerController : MonoBehaviour
         _animator = GetComponent<Animator>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         playerCreated = true;
+        isTalking = false;
     }
 
     void Update()
     {
+        if(isTalking)
+        {
+            _rigidbody2D.velocity = Vector2.zero;
+            return;
+        }
+
         walking = false;
 
         if (!canMove) return;

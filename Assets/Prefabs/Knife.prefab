@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9024184208583140576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7294998527007486382}
+  m_Layer: 0
+  m_Name: HitPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7294998527007486382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024184208583140576}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.375, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6378457762531241779}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1309955431421512046
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12,11 +42,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Knife
       objectReference: {fileID: 0}
+    - target: {fileID: 2331812027448364083, guid: 51ccc16b4bc8f3844a54b1511ff316a2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2612420823319796432, guid: 51ccc16b4bc8f3844a54b1511ff316a2,
         type: 3}
       propertyPath: damage
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2612420823319796432, guid: 51ccc16b4bc8f3844a54b1511ff316a2,
+        type: 3}
+      propertyPath: damageCanvas
+      value: 
+      objectReference: {fileID: 5255228467189616100, guid: 1dcc48316de720141ac45acaa1e9296a,
+        type: 3}
     - target: {fileID: 4454092664190721604, guid: 51ccc16b4bc8f3844a54b1511ff316a2,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
@@ -95,3 +136,9 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51ccc16b4bc8f3844a54b1511ff316a2, type: 3}
+--- !u!4 &6378457762531241779 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5379884058504914525, guid: 51ccc16b4bc8f3844a54b1511ff316a2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1309955431421512046}
+  m_PrefabAsset: {fileID: 0}

@@ -22,7 +22,6 @@ public class EnemyController : MonoBehaviour
     private bool isMoving;
     private Vector2 directionToMove;
 
-    // Start is called before the first frame update
     void Start()
     {
         _rigibody = GetComponent<Rigidbody2D>();
@@ -30,7 +29,6 @@ public class EnemyController : MonoBehaviour
         timeToMakeStepCounter = timeToMakeStep * Random.Range(0.5f, 1.51f);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(isMoving)

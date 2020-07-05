@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -3197161000879529343}
   - component: {fileID: 5291415924299486562}
   - component: {fileID: 5858981444623945239}
+  - component: {fileID: 2818372539600226751}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Enemy
@@ -52,6 +53,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -212,3 +214,16 @@ MonoBehaviour:
   speedLevels: 000000000a00000014000000
   luckLevels: 00000000050000000a000000
   accuracyLevels: 05000000080000000a000000
+--- !u!114 &2818372539600226751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2188135581682069191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01fe77780c628fa45a498ed2ce4879d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyName: RedSlime
