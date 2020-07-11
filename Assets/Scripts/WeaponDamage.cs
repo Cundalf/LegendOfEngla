@@ -9,6 +9,7 @@ public class WeaponDamage : MonoBehaviour
 
     public GameObject bloodAnim;
     public GameObject damageCanvas;
+    public string WeaponName;
     private GameObject hitPoit;
     private CharacterStats stats;
 
