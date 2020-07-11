@@ -256,7 +256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextUUID: 
   speed: 5
-  lastMovement: {x: 0, y: 0}
+  lastMovement: {x: 0, y: 1}
   canMove: 1
   isTalking: 0
   attackTime: 0.5
