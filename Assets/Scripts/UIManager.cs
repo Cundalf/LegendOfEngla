@@ -17,10 +17,12 @@ public class UIManager : MonoBehaviour
     public Button inventoryButton;
     public Image playerAvatar;
     private WeaponManager weaponManager;
+    private ItemsManager itemsManager;
 
     void Start()
     {
         weaponManager = FindObjectOfType<WeaponManager>();
+        itemsManager = FindObjectOfType<ItemsManager>();
         inventoryPanel.SetActive(false);
         menuPanel.SetActive(false);
     }
@@ -74,19 +76,35 @@ public class UIManager : MonoBehaviour
 
     public void FillInventory()
     {
-        List<GameObject> weapons = weaponManager.GetAllWeapons();
 
+        // WEAPONS
+        List<GameObject> items = weaponManager.GetAllWeapons();
         int i = 0;
-        foreach ( GameObject weapon in weapons )
-        {
-            Button tempB = Instantiate(inventoryButton, inventoryPanel.transform);
-            tempB.GetComponent<InventoryButton>().type = InventoryButton.ItemType.WEAPON;
-            tempB.GetComponent<InventoryButton>().itemIndex = i;
-            tempB.onClick.AddListener(() => tempB.GetComponent<InventoryButton>().ActivateButton());
-            tempB.image.sprite = weapon.GetComponent<SpriteRenderer>().sprite;
 
+        foreach ( GameObject item in items)
+        {
+            AddItemToInventory(item, InventoryButton.ItemType.WEAPON, i);
             i++;
         }
+
+        // SPECIAL ITEMS
+        items = itemsManager.GetQuestItems();
+        i = 0;
+
+        foreach (GameObject item in items)
+        {
+            AddItemToInventory(item, InventoryButton.ItemType.SPECIAL_ITEMS, i);
+            i++;
+        }
+    }
+
+    private void AddItemToInventory(GameObject item, InventoryButton.ItemType type, int idx)
+    {
+        Button tempB = Instantiate(inventoryButton, inventoryPanel.transform);
+        tempB.GetComponent<InventoryButton>().type = type;
+        tempB.GetComponent<InventoryButton>().itemIndex = idx;
+        tempB.onClick.AddListener(() => tempB.GetComponent<InventoryButton>().ActivateButton());
+        tempB.image.sprite = item.GetComponent<SpriteRenderer>().sprite;
     }
 
     public void ShowOnly(int type)
