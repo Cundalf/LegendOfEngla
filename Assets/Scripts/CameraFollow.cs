@@ -10,13 +10,11 @@ public class CameraFollow : MonoBehaviour
     public float cameraSpeed;
 
     private Camera theCamera;
-    private BoxCollider2D cameraLimits;
     private Vector3 minLimits, maxLimits;
     private float halfHeight, halfWidth;
 
-    void Start()
+    public void ChangeLimits(BoxCollider2D cameraLimits)
     {
-        cameraLimits = GameObject.Find("Limits").GetComponent<BoxCollider2D>();
         minLimits = cameraLimits.bounds.min;
         maxLimits = cameraLimits.bounds.max;
 

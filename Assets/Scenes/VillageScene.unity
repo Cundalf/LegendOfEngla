@@ -110992,6 +110992,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 862174163}
     m_Modifications:
+    - target: {fileID: 7180622457391502208, guid: bc5877d471c6ba449810177241f41e18,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180622457391502208, guid: bc5877d471c6ba449810177241f41e18,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 52
+      objectReference: {fileID: 0}
     - target: {fileID: 7180622457391502209, guid: bc5877d471c6ba449810177241f41e18,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -111050,7 +111060,7 @@ PrefabInstance:
     - target: {fileID: 7180622457391502214, guid: bc5877d471c6ba449810177241f41e18,
         type: 3}
       propertyPath: m_Name
-      value: Limits
+      value: CameraLimits
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc5877d471c6ba449810177241f41e18, type: 3}
