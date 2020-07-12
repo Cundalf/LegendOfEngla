@@ -2,20 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Camera))]
 public class CameraFollow : MonoBehaviour
 {
     public GameObject target;
     private Vector3 targetPosition;
     public float cameraSpeed;
 
+    private Camera theCamera;
+    private BoxCollider2D cameraLimits;
+    private Vector3 minLimits, maxLimits;
+    private float halfHeight, halfWidth;
+
     void Start()
     {
-        
+        cameraLimits = GameObject.Find("Limits").GetComponent<BoxCollider2D>();
+        minLimits = cameraLimits.bounds.min;
+        maxLimits = cameraLimits.bounds.max;
+
+        theCamera = GetComponent<Camera>();
+        halfHeight = theCamera.orthographicSize;
+        halfWidth = (halfHeight / Screen.height) * Screen.width;
     }
 
     void Update()
     {
-        targetPosition = new Vector3(target.transform.position.x, target.transform.position.y, transform.position.z);
+        float posX = Mathf.Clamp(target.transform.position.x, minLimits.x + halfWidth, maxLimits.x - halfWidth);
+        float posY = Mathf.Clamp(target.transform.position.y, minLimits.y + halfHeight, maxLimits.y - halfHeight);
+
+        targetPosition = new Vector3(posX, posY, transform.position.z);
     }
 
     private void LateUpdate()
