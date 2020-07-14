@@ -64,15 +64,24 @@ public class HealthManager : MonoBehaviour
 
     public void DamageCharacter(int damage)
     {
+        SFXManager.SharedInstance.PlaySFX(SFXManager.SFXType.HIT);
+
         currentHealth -= damage;
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             gameObject.SetActive(false);
 
-            if(gameObject.tag.Equals("Enemy"))
+            if (gameObject.tag.Equals("Enemy"))
             {
                 GameObject.Find("Player").GetComponent<CharacterStats>().addExperience(expWhenDefeated);
                 questManager.enemyKilled = quest;
+            }
+
+
+            if (gameObject.tag.Equals("Player"))
+            {
+                SFXManager.SharedInstance.PlaySFX(SFXManager.SFXType.DIE);
+                //TODO: Implementar GameOver
             }
         }
 

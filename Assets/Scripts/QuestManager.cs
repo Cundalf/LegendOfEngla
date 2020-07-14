@@ -18,11 +18,6 @@ public class QuestManager : MonoBehaviour
             quests.Add(t.gameObject.GetComponent<Quest>());
         }
     }
-  
-    void Update()
-    {
-        
-    }
 
     public void ShowQuestText(string questText)
     {
