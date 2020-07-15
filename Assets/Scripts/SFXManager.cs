@@ -15,6 +15,8 @@ public class SFXManager : MonoBehaviour
         }
     }
 
+    private List<GameObject> audios;
+
     private void Awake()
     {
         if(sharedInstance != null && sharedInstance != this)
@@ -23,36 +25,31 @@ public class SFXManager : MonoBehaviour
         }
 
         sharedInstance = this;
-    }
+        DontDestroyOnLoad(this);
 
-    public enum SFXType
-    {
-        ATTACK, DIE, HIT, KNOCK, MISSIONSTART, MISSIONEND
-    }
-    public AudioSource attack, die, hit, knock, missionEnd, missionStart;
-
-    public void PlaySFX(SFXType type)
-    {
-        switch (type)
+        audios = new List<GameObject>();
+        GameObject sounds = GameObject.Find("Sounds");
+        foreach(Transform t in sounds.transform)
         {
-            case SFXType.ATTACK:
-                attack.Play();
-                break;
-            case SFXType.DIE:
-                die.Play();
-                break;
-            case SFXType.HIT:
-                hit.Play();
-                break;
-            case SFXType.KNOCK:
-                knock.Play();
-                break;
-            case SFXType.MISSIONSTART:
-                missionStart.Play();
-                break;
-            case SFXType.MISSIONEND:
-                missionEnd.Play();
-                break;
+            audios.Add(t.gameObject);
         }
+    }
+
+    public AudioSource FindAudioSource(SFXType.SoundType type)
+    {
+        foreach(GameObject g in audios)
+        {
+            if(g.GetComponent<SFXType>().type == type)
+            {
+                return g.GetComponent<AudioSource>();
+            }
+        }
+
+        return null;
+    }
+
+    public void PlaySFX(SFXType.SoundType type)
+    {
+        FindAudioSource(type).Play();
     }
 }

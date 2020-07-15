@@ -27,7 +27,7 @@ public class GoToNewPlace : MonoBehaviour
             {
                 if (needsClick)
                 {
-                    SFXManager.SharedInstance.PlaySFX(SFXManager.SFXType.KNOCK);
+                    SFXManager.SharedInstance.PlaySFX(SFXType.SoundType.KNOCK);
                 }
                 
                 SceneManager.LoadScene(newPlaceName);

@@ -15,6 +15,17 @@ public class HealthManager : MonoBehaviour
         {
             return currentHealth;
         }
+        set
+        {
+            if(value < 0)
+            {
+                currentHealth = 0;
+            }
+            else
+            {
+                currentHealth = value;
+            }
+        }
     }
 
     public bool flashActive;
@@ -64,10 +75,10 @@ public class HealthManager : MonoBehaviour
 
     public void DamageCharacter(int damage)
     {
-        SFXManager.SharedInstance.PlaySFX(SFXManager.SFXType.HIT);
+        SFXManager.SharedInstance.PlaySFX(SFXType.SoundType.HIT);
 
-        currentHealth -= damage;
-        if (currentHealth <= 0)
+        Health -= damage;
+        if (Health <= 0)
         {
             gameObject.SetActive(false);
 
@@ -80,7 +91,7 @@ public class HealthManager : MonoBehaviour
 
             if (gameObject.tag.Equals("Player"))
             {
-                SFXManager.SharedInstance.PlaySFX(SFXManager.SFXType.DIE);
+                SFXManager.SharedInstance.PlaySFX(SFXType.SoundType.DIE);
                 //TODO: Implementar GameOver
             }
         }
@@ -98,7 +109,7 @@ public class HealthManager : MonoBehaviour
     public void UpdateMaxHealth(int newMaxHealth)
     {
         maxHealth = newMaxHealth;
-        currentHealth = newMaxHealth;
+        Health = newMaxHealth;
     }
 
     private void ToggleColor(bool visible)
