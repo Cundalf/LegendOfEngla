@@ -344,6 +344,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeWeapon: 0
+  activeArmors: 0
+  activeRing1: 0
+  activeRing2: 0
 --- !u!1001 &2709309170107228760
 PrefabInstance:
   m_ObjectHideFlags: 0

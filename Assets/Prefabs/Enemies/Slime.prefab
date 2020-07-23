@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c377e4c31c705144c906693d3e56fa85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 1.5
   timeBetweenSteps: 2
   timeToMakeStep: 2
 --- !u!114 &-3197161000879529343
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToRevivePlayer: 2
-  damage: 1
+  damage: 4
   damageCanvas: {fileID: 5255228467189616100, guid: 1dcc48316de720141ac45acaa1e9296a,
     type: 3}
 --- !u!114 &5291415924299486562
@@ -192,7 +192,7 @@ MonoBehaviour:
   currentHealth: 0
   flashActive: 0
   flashLength: 0
-  expWhenDefeated: 0
+  expWhenDefeated: 2
 --- !u!114 &5858981444623945239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,15 +205,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b43c9ff591a1f748a63777ed1b679c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 1
   exp: 0
-  expToLevelUp: 
-  hpLevels: 0a0000001400000032000000
-  strengthLevels: 0a0000000f00000019000000
-  defenseLevels: 000000000a00000019000000
-  speedLevels: 000000000a00000014000000
-  luckLevels: 00000000050000000a000000
-  accuracyLevels: 05000000080000000a000000
+  expToLevelUp: 00000000010000000200000003000000
+  hpLevels: 000000000a0000001400000032000000
+  strengthLevels: 000000000a0000000f00000019000000
+  defenseLevels: 00000000010000000a00000019000000
+  speedLevels: 00000000010000000a00000014000000
+  luckLevels: 0000000001000000050000000a000000
+  accuracyLevels: 0000000005000000080000000a000000
 --- !u!114 &2818372539600226751
 MonoBehaviour:
   m_ObjectHideFlags: 0

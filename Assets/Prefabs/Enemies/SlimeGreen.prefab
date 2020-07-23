@@ -7,6 +7,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3197161000879529343, guid: a581973d31b2c474cacc43d34b1755c4,
+        type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422252659327721536, guid: a581973d31b2c474cacc43d34b1755c4,
+        type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003097024747978953, guid: a581973d31b2c474cacc43d34b1755c4,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003097024747978953, guid: a581973d31b2c474cacc43d34b1755c4,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003097024747978953, guid: a581973d31b2c474cacc43d34b1755c4,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2188135581682069191, guid: a581973d31b2c474cacc43d34b1755c4,
         type: 3}
       propertyPath: m_Name
@@ -82,20 +107,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.2
       objectReference: {fileID: 0}
-    - target: {fileID: 2003097024747978953, guid: a581973d31b2c474cacc43d34b1755c4,
+    - target: {fileID: 5291415924299486562, guid: a581973d31b2c474cacc43d34b1755c4,
         type: 3}
-      propertyPath: m_Color.r
-      value: 0
+      propertyPath: expWhenDefeated
+      value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 2003097024747978953, guid: a581973d31b2c474cacc43d34b1755c4,
+    - target: {fileID: 5858981444623945239, guid: a581973d31b2c474cacc43d34b1755c4,
         type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2003097024747978953, guid: a581973d31b2c474cacc43d34b1755c4,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0
+      propertyPath: level
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a581973d31b2c474cacc43d34b1755c4, type: 3}
