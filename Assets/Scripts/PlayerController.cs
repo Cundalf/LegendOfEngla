@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     public bool isTalking;
 
     private bool walking = false;
-    private bool attacking = false;
+    public bool attacking = false;
     private const string    AXIS_H = "Horizontal", 
                             AXIS_V = "Vertical",
                             WALK = "Walking",
@@ -38,20 +38,21 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if(isTalking)
+
+        if (isTalking)
         {
             _rigidbody2D.velocity = Vector2.zero;
+            walking = false;
             return;
         }
 
         walking = false;
-
         if (!canMove) return;
 
-        if(attacking)
+        if (attacking)
         {
             attackTimeCounter -= Time.deltaTime;
-            if(attackTimeCounter < 0)
+            if (attackTimeCounter < 0)
             {
                 attacking = false;
                 _animator.SetBool(ATTACKING, false);
@@ -59,7 +60,29 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Mathf.Abs(Input.GetAxisRaw(AXIS_H)) > 0.2f)
+            {
+                _rigidbody2D.velocity = new Vector2(Input.GetAxisRaw(AXIS_H), _rigidbody2D.velocity.y).normalized * speed;
+                lastMovement = new Vector2(Input.GetAxisRaw(AXIS_H), 0);
+                walking = true;
+            }
+            else
+            {
+                _rigidbody2D.velocity = new Vector2(0, _rigidbody2D.velocity.y);
+            }
+
+            if (Mathf.Abs(Input.GetAxisRaw(AXIS_V)) > 0.2f)
+            {
+                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, Input.GetAxisRaw(AXIS_V)).normalized * speed;
+                lastMovement = new Vector2(0, Input.GetAxisRaw(AXIS_V));
+                walking = true;
+            }
+            else
+            {
+                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, 0);
+            }
+
+            if (Input.GetMouseButtonDown(0) && !walking)
             {
                 SFXManager.SharedInstance.PlaySFX(SFXType.SoundType.ATTACK);
                 attacking = true;
@@ -68,42 +91,6 @@ public class PlayerController : MonoBehaviour
                 _animator.SetBool(ATTACKING, true);
             }
         }
-
-        if(Mathf.Abs(Input.GetAxisRaw(AXIS_H)) > 0.2f)
-        {
-            //float velocity = Input.GetAxisRaw(AXIS_H) * speed;
-            //_rigidbody2D.velocity = new Vector2(velocity, _rigidbody2D.velocity.y);
-            _rigidbody2D.velocity = new Vector2(Input.GetAxisRaw(AXIS_H), _rigidbody2D.velocity.y).normalized * speed;
-            lastMovement = new Vector2(Input.GetAxisRaw(AXIS_H), 0);
-            walking = true;
-        }
-        else
-        {
-            _rigidbody2D.velocity = new Vector2(0, _rigidbody2D.velocity.y);
-        }
-
-        if (Mathf.Abs(Input.GetAxisRaw(AXIS_V)) > 0.2f)
-        {
-            //float velocity = Input.GetAxisRaw(AXIS_V) * speed;
-            //_rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, velocity);
-            _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, Input.GetAxisRaw(AXIS_V)).normalized * speed;
-            lastMovement = new Vector2(0, Input.GetAxisRaw(AXIS_V));
-            walking = true;
-        }
-        else
-        {
-            _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, 0);
-        }
-
-         /*
-        if (Mathf.Abs(Input.GetAxisRaw(AXIS_H)) > 0.2f && Mathf.Abs(Input.GetAxisRaw(AXIS_V)) > 0.2f)
-        {
-            currentSpeed = speed / Mathf.Sqrt(2);
-        }
-        else
-        {
-            currentSpeed = speed;
-        }*/
     }
 
     private void LateUpdate()

@@ -6,7 +6,7 @@ public class PlayAudioTrack : MonoBehaviour
 {
     private AudioManager audioManager;
     public int newTrackID;
-
+    public bool noRepeat;
     public bool playOnStart;
 
     private void Start()
@@ -23,7 +23,7 @@ public class PlayAudioTrack : MonoBehaviour
         if(collision.gameObject.name.Equals("Player"))
         {
             audioManager.PlayNewTrack(newTrackID);
-            gameObject.SetActive(false);
+            if(noRepeat) gameObject.SetActive(false);
         }
     }
 }
