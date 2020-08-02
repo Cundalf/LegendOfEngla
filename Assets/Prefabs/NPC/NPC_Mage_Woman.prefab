@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6606377932607724221
+--- !u!1001 &8857166835724892436
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,13 +10,13 @@ PrefabInstance:
     - target: {fileID: 5438812317165113554, guid: e050910e6821ce3439ccdbd65b3d40eb,
         type: 3}
       propertyPath: m_Name
-      value: NPC_Man
+      value: NPC_Mage_Woman
       objectReference: {fileID: 0}
     - target: {fileID: 5438812317165113558, guid: e050910e6821ce3439ccdbd65b3d40eb,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -5498452386917162133, guid: 08c1e80a0fb1680488722c687b303c53,
+      objectReference: {fileID: 5975225309399005822, guid: 763b2c80da8ec6a47b04b2a4531a3795,
         type: 3}
     - target: {fileID: 5438812317165113559, guid: e050910e6821ce3439ccdbd65b3d40eb,
         type: 3}
