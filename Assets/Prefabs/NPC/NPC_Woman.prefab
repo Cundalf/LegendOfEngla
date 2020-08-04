@@ -178,6 +178,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5438812317165113559}
     m_Modifications:
+    - target: {fileID: 8010598145124233744, guid: 944dca68b1b97f64d8df901bd63d534c,
+        type: 3}
+      propertyPath: npcDialogueLines.Array.data[0]
+      value: Hola joven, eres nuevo por estos lados? Aunque tu cara se me hace familiar...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010598145124233744, guid: 944dca68b1b97f64d8df901bd63d534c,
+        type: 3}
+      propertyPath: npcDialogueLines.Array.data[1]
+      value: En fin, no tengo buena memoria... Soy Aina, encantada!
+      objectReference: {fileID: 0}
     - target: {fileID: 8010598145124233758, guid: 944dca68b1b97f64d8df901bd63d534c,
         type: 3}
       propertyPath: m_LocalPosition.x
