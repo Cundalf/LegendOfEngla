@@ -7,9 +7,15 @@ public class WeaponDamage : MonoBehaviour
     [Tooltip("Daño provocado")]
     public int damage;
 
+    [Tooltip("Prefab con el efecto del daño a un enemigo")]
     public GameObject bloodAnim;
+
+    [Tooltip("Prefab de tipo canvas que muestra la cantidad de daño causado")]
     public GameObject damageCanvas;
+
+    [Tooltip("Nombre del Arma")]
     public string WeaponName;
+
     private GameObject hitPoit;
     private CharacterStats stats;
     private PlayerController playerController;
@@ -26,7 +32,7 @@ public class WeaponDamage : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (!collision.gameObject.tag.Equals("Enemy") || !playerController.attacking) return;
+        if (!collision.gameObject.tag.Equals("Enemy") || !playerController.IsAttacking) return;
         
         CharacterStats enemyStats = collision.gameObject.GetComponent<CharacterStats>();
 

@@ -5,26 +5,21 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class CameraFollow : MonoBehaviour
 {
+    [Tooltip("Objetivo que seguira la camara")]
     public GameObject target;
-    private Vector3 targetPosition;
+    [Tooltip("Velocidad de movimiento de la camara")]
     public float cameraSpeed;
 
+    private Vector3 targetPosition;
     private Camera theCamera;
     private Vector3 minLimits, maxLimits;
+
+    // Punto central de la camara
     private float halfHeight, halfWidth;
-
-    public void ChangeLimits(BoxCollider2D cameraLimits)
-    {
-        minLimits = cameraLimits.bounds.min;
-        maxLimits = cameraLimits.bounds.max;
-
-        theCamera = GetComponent<Camera>();
-        halfHeight = theCamera.orthographicSize;
-        halfWidth = (halfHeight / Screen.height) * Screen.width;
-    }
 
     void Update()
     {
+        // Calculo de posicion para el target
         float posX = Mathf.Clamp(target.transform.position.x, minLimits.x + halfWidth, maxLimits.x - halfWidth);
         float posY = Mathf.Clamp(target.transform.position.y, minLimits.y + halfHeight, maxLimits.y - halfHeight);
 
@@ -33,6 +28,19 @@ public class CameraFollow : MonoBehaviour
 
     private void LateUpdate()
     {
+        // Movimiento de la camara
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * cameraSpeed);
+    }
+
+    public void ChangeLimits(BoxCollider2D cameraLimits)
+    {
+        // Limites de la propia camara
+        minLimits = cameraLimits.bounds.min;
+        maxLimits = cameraLimits.bounds.max;
+
+        // Calculo del punto central de la camara
+        theCamera = GetComponent<Camera>();
+        halfHeight = theCamera.orthographicSize;
+        halfWidth = (halfHeight / Screen.height) * Screen.width;
     }
 }

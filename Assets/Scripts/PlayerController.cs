@@ -6,49 +6,84 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
+    // Public Variable
+    [Tooltip("ID del destino")]
     public string nextUUID;
-    public float speed = 5.0f;
-    //public float currentSpeed = 5.0f;
-    public Vector2 lastMovement = Vector2.zero;
-    public static bool playerCreated;
-    public bool canMove = true;
-    public bool isTalking;
 
+    [Tooltip("Velocidad estandar del jugador")]
+    public const float speed = 3.5f;
+
+    [Tooltip("Velocidad del jugador al correr")]
+    public const float Runningspeed = 5.0f;
+
+    [Tooltip("Configuracion del facing del personaje")]
+    public Vector2 lastMovement = Vector2.zero;
+
+    [Tooltip("Activa o desactiva el movimiento del personaje")]
+    public bool canMove = true;
+
+    // Para el control del DontDestroyOnLoad.
+    // TODO: Pasar a otra alternativa
+    public static bool playerCreated;
+
+    // Private Variables
     private bool walking = false;
-    public bool attacking = false;
-    private const string    AXIS_H = "Horizontal", 
+    private bool attacking = false;
+    private Animator _animator;
+    private Rigidbody2D _rigidbody2D;
+    private float attackTimeCounter;
+    private const string AXIS_H = "Horizontal",
                             AXIS_V = "Vertical",
                             WALK = "Walking",
                             ATTACKING = "Attacking",
-                            LASTH = "LastH", 
+                            LASTH = "LastH",
                             LASTV = "LastV";
-    private Animator _animator;
-    private Rigidbody2D _rigidbody2D;
 
-    public float attackTime;
-    private float attackTimeCounter;
+    public bool IsAttacking
+    {
+        get
+        {
+            return attacking;
+        }
+    }
+
+    public float attackTime
+    {
+        set
+        {
+            if (value < 0)
+            {
+                attackTime = 0;
+            }
+            else
+            {
+                attackTime = value;
+            }
+        }
+        get
+        {
+            return attackTime;
+        }
+    }
+
 
     void Start()
     {
         _animator = GetComponent<Animator>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         playerCreated = true;
-        isTalking = false;
     }
 
     void Update()
     {
-
-        if (isTalking)
+        
+        walking = false;
+        if (!canMove)
         {
             _rigidbody2D.velocity = Vector2.zero;
-            walking = false;
             return;
         }
-
-        walking = false;
-        if (!canMove) return;
-
+        
         if (attacking)
         {
             attackTimeCounter -= Time.deltaTime;
@@ -60,6 +95,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            // Movimiento Horizontal
             if (Mathf.Abs(Input.GetAxisRaw(AXIS_H)) > 0.2f)
             {
                 _rigidbody2D.velocity = new Vector2(Input.GetAxisRaw(AXIS_H), _rigidbody2D.velocity.y).normalized * speed;
@@ -71,6 +107,8 @@ public class PlayerController : MonoBehaviour
                 _rigidbody2D.velocity = new Vector2(0, _rigidbody2D.velocity.y);
             }
 
+
+            // Movimiento vertical
             if (Mathf.Abs(Input.GetAxisRaw(AXIS_V)) > 0.2f)
             {
                 _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, Input.GetAxisRaw(AXIS_V)).normalized * speed;
@@ -82,7 +120,8 @@ public class PlayerController : MonoBehaviour
                 _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, 0);
             }
 
-            if (Input.GetMouseButtonDown(0) && !walking)
+            // Control de ataque
+            if (Input.GetButton("Attack") && !walking)
             {
                 SFXManager.SharedInstance.PlaySFX(SFXType.SoundType.ATTACK);
                 attacking = true;

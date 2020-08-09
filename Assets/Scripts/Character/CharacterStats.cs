@@ -11,12 +11,18 @@ public class CharacterStats : MonoBehaviour
     public int exp;
     public int[] expToLevelUp;
 
-    //TODO: Agregar tooltips
+    //TODO: Pasar a carga por JSON y prt
+    [Tooltip("Puntos de salud por nivel")]
     public int[] hpLevels;
+    [Tooltip("Puntos de fuerza por nivel")]
     public int[] strengthLevels;
+    [Tooltip("Puntos de defensa por nivel")]
     public int[] defenseLevels;
+    [Tooltip("Puntos de velocidad de ataque por nivel")]
     public int[] speedLevels;
+    [Tooltip("Puntos de suerte (en realacion al ataque y la defensa)")]
     public int[] luckLevels;
+    [Tooltip("Puntos de precision (probabilidad de critico)")]
     public int[] accuracyLevels;
 
     private HealthManager healthManager;

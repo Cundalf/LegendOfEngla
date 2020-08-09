@@ -114,8 +114,7 @@ public class UIManager : MonoBehaviour
     public void ShowOnly(int type)
     {
         foreach (Transform t in inventoryPanel.transform)
-        {
-            Debug.Log((int)t.GetComponent<InventoryButton>().type);
+        {  
             t.gameObject.SetActive((int)t.GetComponent<InventoryButton>().type == type);
         }
     }
