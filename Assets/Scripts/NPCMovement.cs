@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class NPCMovement : MonoBehaviour
 {
@@ -34,7 +32,6 @@ public class NPCMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-
         if(isTalking)
         {
             isTalking = dialogManager.dialogueActive;

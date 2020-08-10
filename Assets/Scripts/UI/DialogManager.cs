@@ -34,7 +34,7 @@ public class DialogManager : MonoBehaviour
                 dialogueActive = false;
                 avatarImage.enabled = false;
                 dialogueBox.SetActive(false);
-                playerController.canMove = false;
+                playerController.canMove = true;
             }
             else
             {
@@ -50,7 +50,7 @@ public class DialogManager : MonoBehaviour
         dialogueActive = true;
         dialogueBox.SetActive(true);
         dialogueText.text = dialogueLines[currentDialogueLine];
-        playerController.canMove = true;
+        playerController.canMove = false;
     }
 
     public void ShowDialogue(string[] lines, Sprite sprite)

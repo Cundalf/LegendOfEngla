@@ -47,7 +47,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public float attackTime
+    public float attackTime;
+    /*public float attackTime
     {
         set
         {
@@ -64,7 +65,7 @@ public class PlayerController : MonoBehaviour
         {
             return attackTime;
         }
-    }
+    }*/
 
 
     void Start()
@@ -76,7 +77,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        
         walking = false;
         if (!canMove)
         {

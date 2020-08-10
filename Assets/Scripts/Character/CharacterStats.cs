@@ -52,6 +52,8 @@ public class CharacterStats : MonoBehaviour
         {
             level++;
             healthManager.UpdateMaxHealth(hpLevels[level]);
+
+            Debug.Log(speedLevels[level] / MAX_STAT);
             playerController.attackTime -= speedLevels[level] / MAX_STAT;
         }
     }
