@@ -79,7 +79,7 @@ public class NPCMovement : MonoBehaviour
         }
     }
 
-    public void StartWalking()
+    private void StartWalking()
     {
         currentDirection = Random.Range(0, walkingDirections.Length);
         if (currentDirection != forbiddenDirection)
@@ -91,7 +91,7 @@ public class NPCMovement : MonoBehaviour
         }
     }
 
-    public void StopWalking()
+    private void StopWalking()
     {
         isWalking = false;
         waitCounter = waitTime;
