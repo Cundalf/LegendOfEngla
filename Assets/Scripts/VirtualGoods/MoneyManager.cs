@@ -27,6 +27,7 @@ public class MoneyManager : MonoBehaviour
     {
         currentMoney += moneyCollected;
         moneyText.text = currentMoney.ToString();
-        PlayerPrefs.SetInt("Money", currentMoney);
+        // Anulado temporalmente
+        //PlayerPrefs.SetInt("Money", currentMoney);
     }
 }

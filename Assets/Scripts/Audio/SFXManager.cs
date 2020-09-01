@@ -15,7 +15,7 @@ public class SFXManager : MonoBehaviour
         }
     }
 
-    private List<GameObject> audios;
+    public List<GameObject> audios;
 
     private void Awake()
     {
@@ -28,8 +28,7 @@ public class SFXManager : MonoBehaviour
         DontDestroyOnLoad(this);
 
         audios = new List<GameObject>();
-        GameObject sounds = GameObject.Find("Sounds");
-        foreach(Transform t in sounds.transform)
+        foreach (Transform t in transform)
         {
             audios.Add(t.gameObject);
         }
