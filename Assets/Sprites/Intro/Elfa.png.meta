@@ -1,0 +1,392 @@
+fileFormatVersion: 2
+guid: b3dec87c4aba60e41a0526184c318adc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8277908467230469531
+    second: Elfa_0
+  - first:
+      213: -5626120882654506031
+    second: Elfa_1
+  - first:
+      213: -4535750537793586856
+    second: Elfa_2
+  - first:
+      213: -3101581334400119509
+    second: Elfa_3
+  - first:
+      213: -2921893103823080028
+    second: Elfa_4
+  - first:
+      213: -2337402368797549893
+    second: Elfa_5
+  - first:
+      213: 1246773775422355753
+    second: Elfa_6
+  - first:
+      213: -8608748096521913244
+    second: Elfa_7
+  - first:
+      213: 650972567186927179
+    second: Elfa_8
+  - first:
+      213: 8081427432333851279
+    second: Elfa_9
+  - first:
+      213: 1059031729730661633
+    second: Elfa_10
+  - first:
+      213: -4246488117302996569
+    second: Elfa_11
+  - first:
+      213: 8893859211471524178
+    second: Elfa_12
+  - first:
+      213: 4936909700816534515
+    second: Elfa_13
+  - first:
+      213: -3282875140158300623
+    second: Elfa_14
+  - first:
+      213: -6381557957659370895
+    second: Elfa_15
+  - first:
+      213: 731474050298468614
+    second: Elfa_16
+  - first:
+      213: 1046559063311260867
+    second: Elfa_17
+  - first:
+      213: -3223657131781788486
+    second: Elfa_18
+  - first:
+      213: -3902172373765022195
+    second: Elfa_19
+  - first:
+      213: -7980323002365740211
+    second: Elfa_20
+  - first:
+      213: 8138493211516918056
+    second: Elfa_21
+  - first:
+      213: 2689471430095293579
+    second: Elfa_22
+  - first:
+      213: -6851806958340394340
+    second: Elfa_23
+  - first:
+      213: 941566352865056116
+    second: Elfa_24
+  - first:
+      213: 7412948571217332355
+    second: Elfa_25
+  - first:
+      213: 622976965566044275
+    second: Elfa_26
+  - first:
+      213: -7192927858222018484
+    second: Elfa_27
+  - first:
+      213: 8254138087120236412
+    second: Elfa_28
+  - first:
+      213: -8040903572729226434
+    second: Elfa_29
+  - first:
+      213: 1998157349988098292
+    second: Elfa_30
+  - first:
+      213: -7133783510621150053
+    second: Elfa_31
+  - first:
+      213: 93577905749883797
+    second: Elfa_32
+  - first:
+      213: -4235150187007709784
+    second: Elfa_33
+  - first:
+      213: 4268974863087663055
+    second: Elfa_34
+  - first:
+      213: -3392675750751753297
+    second: Elfa_35
+  - first:
+      213: 1541549202752167932
+    second: Elfa_36
+  - first:
+      213: 3763932634736582818
+    second: Elfa_37
+  - first:
+      213: 1450440222187954869
+    second: Elfa_38
+  - first:
+      213: 3011570643745870825
+    second: Elfa_39
+  - first:
+      213: -3216532137772009716
+    second: Elfa_40
+  - first:
+      213: 5959511186505059862
+    second: Elfa_41
+  - first:
+      213: -5302989153430999857
+    second: Elfa_42
+  - first:
+      213: 3920699877089688551
+    second: Elfa_43
+  - first:
+      213: -3846063324048026750
+    second: Elfa_44
+  - first:
+      213: -8079850829565531748
+    second: Elfa_45
+  - first:
+      213: -6989931537844350895
+    second: Elfa_46
+  - first:
+      213: -1939053453592206684
+    second: Elfa_47
+  - first:
+      213: 313276403125651776
+    second: Elfa_48
+  - first:
+      213: 5258393438350650276
+    second: Elfa_49
+  - first:
+      213: 7448736258919565674
+    second: Elfa_50
+  - first:
+      213: 389634324118856699
+    second: Elfa_51
+  - first:
+      213: -5239848211052550840
+    second: Elfa_52
+  - first:
+      213: -1764138233913426066
+    second: Elfa_53
+  - first:
+      213: -1522493387258337450
+    second: Elfa_54
+  - first:
+      213: -2540019510035757325
+    second: Elfa_55
+  - first:
+      213: 7159868056001774059
+    second: Elfa_56
+  - first:
+      213: -3400345736048912168
+    second: Elfa_57
+  - first:
+      213: 5943349408316885375
+    second: Elfa_58
+  - first:
+      213: -7666743128468721670
+    second: Elfa_59
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Elfa_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56297877b16fe1d80800000000000000
+      internalID: -8277908467230469531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elfa_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d398fd9dd00ce1b0800000000000000
+      internalID: -5626120882654506031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elfa_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 859b605dae6cd01c0800000000000000
+      internalID: -4535750537793586856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elfa_3
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d49119538f4f4d0800000000000000
+      internalID: -3101581334400119509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

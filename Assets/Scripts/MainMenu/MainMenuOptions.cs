@@ -7,6 +7,6 @@ public class MainMenuOptions : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("VillageScene");
+        SceneManager.LoadScene("Introduction");
     }
 }
