@@ -65,7 +65,6 @@ public class EnemyController : MonoBehaviour
         if (transform.position.x <= zone.bounds.min.x ||
             transform.position.x >= zone.bounds.max.x)
         {
-            Debug.Log("Me fui en X");
             forbiddenDirection.x = directionToMove.x;
             StopMoving();
         }
@@ -73,7 +72,6 @@ public class EnemyController : MonoBehaviour
         if (transform.position.y <= zone.bounds.min.y ||
             transform.position.y >= zone.bounds.max.y)
         {
-            Debug.Log("Me fui en Y");
             forbiddenDirection.y = directionToMove.y;
             StopMoving();
         }
@@ -83,7 +81,6 @@ public class EnemyController : MonoBehaviour
     {
         directionToMove = new Vector2(Random.Range(-1, 2), Random.Range(-1, 2));
 
-        Debug.Log(directionToMove);
         if ((directionToMove.x != forbiddenDirection.x && directionToMove.y != forbiddenDirection.y))
         {
             _rigibody.velocity = directionToMove * speed;
