@@ -14,6 +14,7 @@ public class IntroManager : MonoBehaviour
 
     private void Start()
     {
+        GameManager.SharedInstance.actualGameState = GameManager.GameState.INTRODUCTION;
         currentDialog = 0;
         ShowDialog();
     }

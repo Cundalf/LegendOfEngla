@@ -7,22 +7,51 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public AudioSource[] audioTracks;
-    public int currentTrack;
-    public bool audioCanBePlayed;
+    public int FirstTrack;
+    public bool AutoPlay;
+    private int currentTrack;
 
-    void Update()
+    private static AudioManager sharedInstance = null;
+
+    public static AudioManager SharedInstance
     {
-        if(audioCanBePlayed)
+        get
         {
-            if (!audioTracks[currentTrack].isPlaying)
-            {
-                audioTracks[currentTrack].Play();
-            }
+            return sharedInstance;
         }
-        else
+    }
+
+    public List<GameObject> audios;
+
+    private void Awake()
+    {
+        if (sharedInstance != null && sharedInstance != this)
         {
-            audioTracks[currentTrack].Stop();
+            Destroy(gameObject);
+            return;
         }
+
+        sharedInstance = this;
+        DontDestroyOnLoad(this);
+    }
+
+    private void Start()
+    {
+        currentTrack = FirstTrack;
+        if (AutoPlay) audioTracks[FirstTrack].Play();
+    }
+
+    public void PlayCurrentTrack()
+    {
+        if (!audioTracks[currentTrack].isPlaying)
+        {
+            audioTracks[currentTrack].Play();
+        }
+    }
+
+    public void Stop()
+    {
+        audioTracks[currentTrack].Stop();
     }
 
     public void PlayNewTrack(int newTrack)

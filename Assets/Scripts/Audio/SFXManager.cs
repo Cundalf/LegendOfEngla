@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SFXManager : MonoBehaviour
 {
-    // Singleton
     private static SFXManager sharedInstance = null;
 
     public static SFXManager SharedInstance
@@ -22,6 +21,7 @@ public class SFXManager : MonoBehaviour
         if(sharedInstance != null && sharedInstance != this)
         {
             Destroy(gameObject);
+            return;
         }
 
         sharedInstance = this;
